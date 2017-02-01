@@ -1,0 +1,94 @@
+<doctype html>
+	<html>
+		<head>
+
+			<h1>
+				<title> Dating Website!  </title>
+			</h1>
+		</head>
+		<body>
+			<p>
+				<h1> 
+					Please Enter Your Details For Our Dating Website! 
+				</h1>
+
+			</p>
+
+			<form id="your details" method="post">
+
+
+				<fieldset>
+					<legend >your face</legend>
+						<label for="imgp">Your image:</label>
+						Your Image:<input type="file" name="choose file" id="imgp" required autofocus><br>
+				</fieldset>
+
+				<Fieldset>
+					<legend width="720px">your General Details</legend>
+						<label for="name">Name:</label>
+							<input type="text"name="name" id="name" required autofocus>
+						<br>
+
+						<label for="gender">Gender:</label>
+							<input type="radio" name="gender" id="gender" value="male" required>Male
+							<input type="radio" name="gender" id="gender" value="Female" required>Female
+		
+						<br>	
+
+						<label for="age">Age:</label>
+							<input type="number" id="age" name="Age" required autofocus> 
+						<br>
+						
+						<label for="date">Date:</label>
+							<input type="date" name="Date" id="date" required autofocus>
+						<br>
+
+						<label for="color">Color:</label>
+							<input type="color" name="colors" id="color" required autofocus>
+						<br>
+
+						<label for="country">Which Country:</label>	
+							<select name="Which Country" id=" country" required autofocus>
+								<option value="india">India</option>
+								<option value="china">China</option>
+								<option value="HK">HongKong</option>
+								<option value="USA">USA</option>
+							</select>
+						<br>
+				</Fieldset>
+
+				<Fieldset>
+					<legend>Your Indicators</legend>
+						<label for="hight:">height:</label>
+							<span class="red">small</span>
+							<input type="range" min="0" max="6" step="1" value="3" id="height" name="height" required autofocus>
+							<span class="yellow" > Tall </span>
+						<br>
+
+						<label	for="salary:">salary:</label>
+							<span class="red">Poor</span>
+							<input type="range" min="0" max="6" step="1" value="3" id="salary" name="salary" required autofocus>
+							<span class="yellow">Rich</span>
+						<br>
+				</Fieldset>
+
+				<Fieldset>
+					<legend>your Contact Information</legend>
+						<label for="Email">Email:</label>
+							<input type="Email" name="Email" Id="Email" required autofocus>
+						<br>
+
+						<label for="mobile">Mobile:</label>
+							<input type="tel" name="Mobile" id="mobile" required autofocus>
+						<br>
+
+						<label for="add">Address:</label>
+							<input type="text" name="Address" id="add" width="360px" height="50px"  required autofocus>
+						<br>
+				</Fieldset>
+
+				<input type="submit" name="send" id='submit' autofocus>
+			</form>
+
+		</body>
+</html>
