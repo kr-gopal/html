@@ -2,36 +2,82 @@
 	<html>
 		<head>
 
-			<h1>
+			<meta charset=Utf-8>
+			<meta http-equiv="X-UA-compatible" content="IE=Edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+			<link rel="stylesheet" type="text/css" href="css/bootstrap-min.css">
+			<link rel="stylesheet" type="text/css" href="css/bootstrap-theme-min.css">
+			<style type="text/css">
+				label{
+						display:inline-block;
+						width:180px;
+						text-align: right;
+						text-align: top;
+					}
+					input :hover { font-size:40px; }
+					textarea{
+								width:360px;
+								height:50px;
+								text-align:center
+							}
+				fieldset{
+							background:#ffffcc;
+							width:720px;
+							margin-bottom:10px;
+							label:180px;
+							display:inline-block;
+							border: 10px solid yellow;
+						}
+						.red {
+								background:red;
+							}
+						.violet {
+								background: violet;
+							}
+				input:hover {
+    							font-size: 25px;
+							}
+				#preview {
+    						width: 200px;
+    					}
+			</style>
+
 				<title> Dating Website!  </title>
-			</h1>
 		</head>
+
 		<body>
-			<p>
-				<h1> 
-					Please Enter Your Details For Our Dating Website! 
-				</h1>
 
-			</p>
+			<header>
+				<div class="Jumbotron">
+					<div class="container">
+						<h1> 
+							Please Enter Your Details For Our Dating Website! 
+						</h1>
+					</div>
+				</div>
+			</header>
 
-			<form id="your details" method="post">
+			<form action="is http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="post">
 
 
 				<fieldset>
 					<legend >your face</legend>
-						<label for="imgp">Your image:</label>
-						Your Image:<input type="file" name="choose file" id="imgp" required autofocus><br>
+						<label for="view">Your image:</label>
+						<input type="file" name="choose file" id="view" required autofocus><br>
+						<label>image preview:</label>
+						<img id="preview">
 				</fieldset>
 
 				<Fieldset>
-					<legend width="720px">your General Details</legend>
+					<legend>your General Details</legend>
 						<label for="name">Name:</label>
-							<input type="text"name="name" id="name" required autofocus>
+							<input type="text" name="name" id="name" required autofocus>
 						<br>
 
 						<label for="gender">Gender:</label>
-							<input type="radio" name="gender" id="gender" value="male" required>Male
-							<input type="radio" name="gender" id="gender" value="Female" required>Female
+							<input type="radio" name="gender" id="gender" value="male" width="auto" required>Male
+							<input type="radio" name="gender" id="gender" value="Female" width="auto" required>Female
 		
 						<br>	
 
@@ -49,10 +95,13 @@
 
 						<label for="country">Which Country:</label>	
 							<select name="Which Country" id=" country" required autofocus>
+								<option value="No Selection">No Selection</option>
 								<option value="india">India</option>
 								<option value="china">China</option>
 								<option value="HK">HongKong</option>
 								<option value="USA">USA</option>
+								<option value="france">france</option>
+								<option value="Russia">Russia</option>
 							</select>
 						<br>
 				</Fieldset>
@@ -60,15 +109,15 @@
 				<Fieldset>
 					<legend>Your Indicators</legend>
 						<label for="hight:">height:</label>
-							<span class="red">small</span>
+							<span class="red">short</span>
 							<input type="range" min="0" max="6" step="1" value="3" id="height" name="height" required autofocus>
-							<span class="yellow" > Tall </span>
+							<span  class="violet"> Tall </span>
 						<br>
 
 						<label	for="salary:">salary:</label>
 							<span class="red">Poor</span>
 							<input type="range" min="0" max="6" step="1" value="3" id="salary" name="salary" required autofocus>
-							<span class="yellow">Rich</span>
+							<span class="violet">Rich</span>
 						<br>
 				</Fieldset>
 
@@ -83,12 +132,20 @@
 						<br>
 
 						<label for="add">Address:</label>
-							<input type="text" name="Address" id="add" width="360px" height="50px"  required autofocus>
+							<textarea type="text" name="Address" id="add" rows="4" cols="45"  required autofocus></textarea>
 						<br>
+						<label for="contact method">Method to contact you:</label>
+							<input type="radio" name="contact method" id="cont_method" value="Email" required>Email
+							<input type="radio" name="contact method" id="cont_method" value="Whatsapp" required>Whatsapp
+							<input type="radio" name="contact method" id="cont_method" value="In-app chat" required>In-app chat
+
 				</Fieldset>
 
-				<input type="submit" name="send" id='submit' autofocus>
+				<input type="submit" name="send" id='submit' method="post" autofocus>
 			</form>
 
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.113/jquery.min.js"></script>
+			<script src="js/bootstrap.min,js"></script>
+			<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 		</body>
 </html>
